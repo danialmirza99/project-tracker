@@ -14,8 +14,24 @@ let updateTime = function () {
 updateTime();
 setInterval(updateTime, 1000);
 
-// Create a Bootstrap card component explaining the instructions of how 
-// to use the app and a button to open a 
-// [Bootstrap modal dialog](https://getbootstrap.com/docs/4.5/components/modal/).
-// TODO
+// Autocomplete widget
+$(function () {
+    var projectOptions = [
+      'Mow Lawn',
+      'Fix Sink',
+      'Cut Tree Branches',
+      'Water Flowers',
+    ];
+    $('#project-type').autocomplete({
+      source: projectOptions,
+    });
+  });
 
+// Datepicker widget
+// https://api.jqueryui.com/datepicker/#option-changeMonth
+$(function () {
+    $('#datepicker').datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+  });
